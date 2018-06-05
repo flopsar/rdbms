@@ -1,0 +1,28 @@
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+mainClassName = 'org.flopsar.rdbms.RDBMS'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+	 mavenLocal()
+	 jcenter()
+}
+
+jar {
+	manifest {
+		attributes('Main-Class':'org.flopsar.rdbms.RDBMS')
+	}
+}
+
+
+dependencies {
+	compile 'com.flopsar:flopsar-fdbc:2.3.0'
+	compile 'org.postgresql:postgresql:42.2.1'
+}
+
+
