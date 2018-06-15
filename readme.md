@@ -1,6 +1,6 @@
-# Flopsar Database to RDBMS converter
+# Flopsar Database to RDBMS exporter
 
-This is a simple application, which allows to transfer data from the Flopsar database to relational database.
+This is a simple application, which allows to transfer data from the Flopsar database to a relational database.
 Currently, there is only one database supported out of the box.
 
 In order to transfer data to a relational database, first you need to create a database and a schema.
