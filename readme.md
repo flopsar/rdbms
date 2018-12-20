@@ -19,9 +19,9 @@ $ psql -h <host> -p <port> -U <usernam> -f dml.sql
 
 There are a few steps required to add support for another database. Follow the instructions below:
 
-1. Create your own database schema file. See [`resources/postgresql/ddl.sql`](https://github.com/dsendkowski/rdbms/blob/master/src/main/resources/postgresql/ddl.sql) as an example.
-2. Create a class that implements [`org.flopsar.rdbms.jdbc.DML`](https://github.com/dsendkowski/rdbms/blob/master/src/main/java/org/flopsar/rdbms/jdbc/DML.java) interface. See [`org.flopsar.rdbms.jdbc.PostgresDML`](https://github.com/dsendkowski/rdbms/blob/master/src/main/java/org/flopsar/rdbms/jdbc/PostgresDML.java) as an example.
-3. Add a new element to the [`SUPPORTED_JDBC_DRIVERS`](https://github.com/dsendkowski/rdbms/blob/396f9949a0535b0523f571612e13f15d07fdc117/src/main/java/org/flopsar/rdbms/jdbc/JDBCConnector.java#L12) array in [`org.flopsar.rdbms.jdbc.JDBCConnector`](https://github.com/dsendkowski/rdbms/blob/master/src/main/java/org/flopsar/rdbms/jdbc/JDBCConnector.java) class.
+1. Create your own database schema file. See [`resources/postgresql/ddl.sql`](https://github.com/flopsar/rdbms/blob/master/src/main/resources/postgresql/ddl.sql) as an example.
+2. Create a class that implements [`org.flopsar.rdbms.jdbc.DML`](https://github.com/flopsar/rdbms/blob/master/src/main/java/org/flopsar/rdbms/jdbc/DML.java) interface. See [`org.flopsar.rdbms.jdbc.PostgresDML`](https://github.com/flopsar/rdbms/blob/master/src/main/java/org/flopsar/rdbms/jdbc/PostgresDML.java) as an example.
+3. Add a new element to the [`SUPPORTED_JDBC_DRIVERS`](https://github.com/flopsar/rdbms/blob/396f9949a0535b0523f571612e13f15d07fdc117/src/main/java/org/flopsar/rdbms/jdbc/JDBCConnector.java#L12) array in [`org.flopsar.rdbms.jdbc.JDBCConnector`](https://github.com/flopsar/rdbms/blob/master/src/main/java/org/flopsar/rdbms/jdbc/JDBCConnector.java) class.
 4. Add a dependency (JDBC jar file) to the Gradle build script.
 
 
